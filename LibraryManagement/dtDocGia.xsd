@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dtDocGia" targetNamespace="http://tempuri.org/dtDocGia.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dtDocGia.xsd" xmlns:mstns="http://tempuri.org/dtDocGia.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dtDocGia" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="DOCGIA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MSDG" type="xs:string" />
+							<xs:element name="TENDG" type="xs:string" />
+							<xs:element name="DIACHI" type="xs:string" minOccurs="0" />
+							<xs:element name="NGAYSINH" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+							<xs:element name="GIOITINH" type="xs:string" minOccurs="0" />
+							<xs:element name="THONGTINKHAC" type="xs:string" minOccurs="0" />
+							<xs:element name="HINHANHDG" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dtDocGiaKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DOCGIA" />
+			<xs:field xpath="mstns:MSDG" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>
