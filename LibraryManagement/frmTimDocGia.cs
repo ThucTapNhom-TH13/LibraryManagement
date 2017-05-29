@@ -324,10 +324,59 @@ namespace Quanlythuvien
 
 		private void btnTim_Click(object sender, System.EventArgs e)
 		{
-			
 
-			
-		}
+            if (txtMaDG.Text == "" && txtHoTen.Text == "" && txtDiaChi.Text == "" &&
+                txtEmail.Text == "")
+                opt = 1;
+            else if (txtMaDG.Text != "" && txtHoTen.Text == "" && txtDiaChi.Text == "" &&
+                txtEmail.Text == "")
+                opt = 2;
+            else if (txtMaDG.Text != "" && txtHoTen.Text == "" && txtDiaChi.Text == ""
+                && txtEmail.Text == "")
+                opt = 2;
+            else if (txtMaDG.Text != "" && txtHoTen.Text != "" && txtDiaChi.Text == ""
+                && txtEmail.Text == "")
+                opt = 3;
+            else if (txtMaDG.Text != "" && txtHoTen.Text != "" && txtDiaChi.Text != ""
+                && txtEmail.Text == "")
+                opt = 4;
+            else if (txtMaDG.Text != "" && txtHoTen.Text != "" && txtDiaChi.Text != ""
+                && txtEmail.Text != "")
+                opt = 5;
+            else if (txtMaDG.Text == "" && txtHoTen.Text != "" && txtDiaChi.Text == ""
+                && txtEmail.Text == "")
+                opt = 6;
+            else if (txtMaDG.Text == "" && txtHoTen.Text != "" && txtDiaChi.Text != ""
+                && txtEmail.Text == "")
+                opt = 7;
+            else if (txtMaDG.Text == "" && txtHoTen.Text != "" && txtDiaChi.Text != ""
+                && txtEmail.Text != "")
+                opt = 8;
+            else if (txtMaDG.Text == "" && txtHoTen.Text == "" && txtDiaChi.Text != ""
+                && txtEmail.Text == "")
+                opt = 9;
+            else if (txtMaDG.Text == "" && txtHoTen.Text == "" && txtDiaChi.Text != ""
+                && txtEmail.Text != "")
+                opt = 10;
+            else if (txtMaDG.Text == "" && txtHoTen.Text == "" && txtDiaChi.Text == ""
+                && txtEmail.Text != "")
+                opt = 11;
+            else if (txtMaDG.Text != "" && txtHoTen.Text == "" && txtDiaChi.Text != ""
+                && txtEmail.Text == "")
+                opt = 12;
+            else if (txtMaDG.Text != "" && txtHoTen.Text == "" && txtDiaChi.Text != ""
+                && txtEmail.Text != "")
+                opt = 13;
+            else if (txtMaDG.Text != "" && txtHoTen.Text == "" && txtDiaChi.Text == ""
+                && txtEmail.Text != "")
+                opt = 14;
+            else if (txtMaDG.Text == "" && txtHoTen.Text != "" && txtDiaChi.Text == ""
+                && txtEmail.Text != "")
+                opt = 15;
+            SqlHelper.ADAPTER = null;
+            SqlHelper.ADAPTER = HienThiDocGia();
+
+        }
 
 		private void btnThoat_Click(object sender, System.EventArgs e)
 		{
@@ -336,18 +385,24 @@ namespace Quanlythuvien
 
 		private void lvDocgia_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-		
-		}
+           
+        }
 
 		private void lvDocgia_DoubleClick(object sender, System.EventArgs e)
 		{
-			
 
-		}
+            if (lvDocgia.SelectedItems.Count == 0)
+                return;
+            SqlHelper.strMaDG = lvDocgia.SelectedItems[0].SubItems[1].Text.Trim();
+            frmChiTietDG fDG = new frmChiTietDG();
+            fDG.ShowDialog();
+        }
 
 		private void btnXem_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            frmRptDG rptdg = new frmRptDG();
+            rptdg.MdiParent = frmMain.ActiveForm;
+            rptdg.Show();
+        }
 	}
 }

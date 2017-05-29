@@ -618,18 +618,41 @@ namespace Quanlythuvien
 
 		private void btnThem_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            SetControlVisible(true);
+            SetNull();
+            lvSach.Enabled = false;
+            txtMaSach.Focus();
+            opt = 1;
+        }
 
 		private void btnXoa_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            if (txtMaSach.Text == "")
+                return;
+
+            DialogResult result = MessageBox.Show("Bạn có chắc xóa Sách này không?",
+                "Delete Book",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SqlHelper.ExecuteNonQuery(
+                    "Pro_DeleteSach",
+                    CommandType.StoredProcedure,
+                    "@mssach", txtMaSach.Text);
+
+                MessageBox.Show("Thông tin Sách này đã bị xóa");
+                HienThiSach();
+            }
+        }
 
 		private void btnSua_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            SetControlVisible(true);
+            txtMaSach.ReadOnly = true;
+            txtTenSach.Focus();
+            opt = 2;
+        }
 
 		private void btnLuu_Click(object sender, System.EventArgs e)
 		{
@@ -679,8 +702,18 @@ namespace Quanlythuvien
 
 		private void lvSach_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			
-		}
+            if (lvSach.SelectedItems.Count == 0)
+                return;
+            txtMaSach.Text = lvSach.SelectedItems[0].SubItems[1].Text;
+            txtTenSach.Text = lvSach.SelectedItems[0].SubItems[2].Text;
+            txtTacGia.Text = lvSach.SelectedItems[0].SubItems[3].Text;
+            cboNXB.SelectedValue = lvSach.SelectedItems[0].SubItems[4].Text;
+            cboLoaiSach.SelectedValue = lvSach.SelectedItems[0].SubItems[5].Text;
+            txtNamXB.Text = lvSach.SelectedItems[0].SubItems[6].Text;
+            txtLanXB.Text = lvSach.SelectedItems[0].SubItems[7].Text;
+            txtSL.Text = lvSach.SelectedItems[0].SubItems[8].Text;
+            txtNoiDungSL.Text = lvSach.SelectedItems[0].SubItems[9].Text;
+        }
 
 		private void groupBox1_Enter(object sender, System.EventArgs e)
 		{
