@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dtSach" targetNamespace="http://tempuri.org/dtSach.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dtSach.xsd" xmlns:mstns="http://tempuri.org/dtSach.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dtSach" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="QUYENSACH">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MSSACH" type="xs:string" />
+							<xs:element name="TENSACH" type="xs:string" minOccurs="0" />
+							<xs:element name="TACGIA" type="xs:string" minOccurs="0" />
+							<xs:element name="MSNHAXB" type="xs:string" minOccurs="0" />
+							<xs:element name="MALOAISACH" type="xs:string" minOccurs="0" />
+							<xs:element name="NAMXB" type="xs:string" minOccurs="0" />
+							<xs:element name="LANXB" type="xs:string" minOccurs="0" />
+							<xs:element name="SOLUONG" type="xs:int" minOccurs="0" />
+							<xs:element name="NOIDUNGTOMLUOC" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dtSachKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:QUYENSACH" />
+			<xs:field xpath="mstns:MSSACH" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>
