@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D4DA2FC-5AB6-41E2-835A-6A4FB1D5F5ED}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>Quanlythuvien</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Quanlythuvien</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>Quanlythuvien.frmLogin</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <Name>CrystalDecisions.CrystalReports.Engine</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <Name>CrystalDecisions.ReportSource</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.ReportSource.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <Name>CrystalDecisions.Shared</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Shared.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <Name>CrystalDecisions.Windows.Forms</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalKeyCodeLib">
+      <Name>CrystalKeyCodeLib</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalKeyCodeLib.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DotNetSkin.SkinControls">
+      <Name>dotnetskin.skincontrols</Name>
+      <HintPath>..\..\..\thanh1\skincontrols-exe\dotnetskin.skincontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC">
+      <Name>Microsoft.VisualC</Name>
+    </Reference>
+    <Reference Include="Office Menu Control">
+      <Name>Office Menu Control</Name>
+      <HintPath>bin\Debug\Office Menu Control.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dtDocGia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtDocGia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtMuonSach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtMuonSach.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtSach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtSach.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtSachTra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtSachTra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtTKDG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtTKDG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtTKDGTre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtTKDGTre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSachMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSachTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSachTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptTKDGMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimSachMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKDGTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptDocGia.cs">
+      <DependentUpon>rptDocGia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptMuonSach.cs">
+      <DependentUpon>rptMuonSach.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptSach.cs">
+      <DependentUpon>rptSach.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptSachTra.cs">
+      <DependentUpon>rptSachTra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptSachTre.cs">
+      <DependentUpon>rptSachTre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptTKDGMuon.cs">
+      <DependentUpon>rptTKDGMuon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptTKDGTre.cs">
+      <DependentUpon>rptTKDGTre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SqlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="App.ico" />
+    <Content Include="dtDocGia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtDocGia.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dtMuonSach.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtMuonSach.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dtSach.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtSach.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dtSachTra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtSachTra.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dtTKDG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtTKDG.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dtTKDGTre.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtTKDGTre.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="frmChiTietDG.resx">
+      <DependentUpon>frmChiTietDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietSach.resx">
+      <DependentUpon>frmChiTietSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocgia.resx">
+      <DependentUpon>frmDocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiSach.resx">
+      <DependentUpon>frmLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMuonSach.resx">
+      <DependentUpon>frmMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNXB.resx">
+      <DependentUpon>frmNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptDG.resx">
+      <DependentUpon>frmRptDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSach.resx">
+      <DependentUpon>frmRptSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSachMuon.resx">
+      <DependentUpon>frmRptSachMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSachTra.resx">
+      <DependentUpon>frmRptSachTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSachTre.resx">
+      <DependentUpon>frmRptSachTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptTKDGMuon.resx">
+      <DependentUpon>frmRptTKDGMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSach.resx">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScreen.resx">
+      <DependentUpon>frmScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimDocGia.resx">
+      <DependentUpon>frmTimDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimSach.resx">
+      <DependentUpon>frmTimSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimSachMuon.resx">
+      <DependentUpon>frmTimSachMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKDG.resx">
+      <DependentUpon>frmTKDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKDGTre.resx">
+      <DependentUpon>frmTKDGTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraSach.resx">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDocGia.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDocGia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptMuonSach.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMuonSach.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSach.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSach.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSachTra.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSachTra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSachTre.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSachTre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTKDGMuon.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTKDGMuon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTKDGTre.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTKDGTre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dtDocGia.xsc">
+      <DependentUpon>dtDocGia.xsd</DependentUpon>
+    </None>
+    <None Include="dtDocGia.xss">
+      <DependentUpon>dtDocGia.xsd</DependentUpon>
+    </None>
+    <None Include="dtDocGia.xsx">
+      <DependentUpon>dtDocGia.xsd</DependentUpon>
+    </None>
+    <None Include="dtMuonSach.xsc">
+      <DependentUpon>dtMuonSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtMuonSach.xss">
+      <DependentUpon>dtMuonSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtMuonSach.xsx">
+      <DependentUpon>dtMuonSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtSach.xsc">
+      <DependentUpon>dtSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtSach.xss">
+      <DependentUpon>dtSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtSach.xsx">
+      <DependentUpon>dtSach.xsd</DependentUpon>
+    </None>
+    <None Include="dtSachTra.xsc">
+      <DependentUpon>dtSachTra.xsd</DependentUpon>
+    </None>
+    <None Include="dtSachTra.xss">
+      <DependentUpon>dtSachTra.xsd</DependentUpon>
+    </None>
+    <None Include="dtSachTra.xsx">
+      <DependentUpon>dtSachTra.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDG.xsc">
+      <DependentUpon>dtTKDG.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDG.xss">
+      <DependentUpon>dtTKDG.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDG.xsx">
+      <DependentUpon>dtTKDG.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDGTre.xsc">
+      <DependentUpon>dtTKDGTre.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDGTre.xss">
+      <DependentUpon>dtTKDGTre.xsd</DependentUpon>
+    </None>
+    <None Include="dtTKDGTre.xsx">
+      <DependentUpon>dtTKDGTre.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
