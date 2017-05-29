@@ -611,15 +611,47 @@ namespace Quanlythuvien
 
 		private void lvDocgia_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			
+
+            if (lvDocgia.SelectedItems.Count == 0)
+                return;
+            txtMaDG.Text = lvDocgia.SelectedItems[0].SubItems[1].Text;
+            txtTenDG.Text = lvDocgia.SelectedItems[0].SubItems[2].Text;
+            txtDC.Text = lvDocgia.SelectedItems[0].SubItems[3].Text;
+            dtNgaySinh.Value = DateTime.Parse(lvDocgia.SelectedItems[0].SubItems[4].Text);
+            txtEmail.Text = lvDocgia.SelectedItems[0].SubItems[5].Text;
+            if (lvDocgia.SelectedItems[0].SubItems[6].Text == "1")
+            {
+                optNam.Checked = true;
+            }
+            else { optNu.Checked = true; }
+
+            txtThongtin.Text = lvDocgia.SelectedItems[0].SubItems[7].Text;
+            try
+            {
+                if (lvDocgia.SelectedItems[0].SubItems[8].Text != "")
+                {
+                    filename = lvDocgia.SelectedItems[0].SubItems[8].Text;
+                    picHinh.Image = new Bitmap(Application.StartupPath + @"\hinh\" + filename);
+                }
+                else
+                {
+                    filename = "";
+                    picHinh.Image = null;
+                }
+            }
+            catch { }
 
 
-		}
+        }
 
-		private void btnThem_Click(object sender, System.EventArgs e)
+        private void btnThem_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            SetControlVisible(true);
+            SetNull();
+            lvDocgia.Enabled = false;
+            txtMaDG.Focus();
+            opt = 1;
+        }
 
 		private void btnBoqua_Click(object sender, System.EventArgs e)
 		{
@@ -644,8 +676,46 @@ namespace Quanlythuvien
 
 		private void btnLuu_Click(object sender, System.EventArgs e)
 		{
-			
-		}
+            try
+            {
+                if (txtMaDG.Text == "" || txtTenDG.Text == "")
+                {
+                    MessageBox.Show(this, "Thông tin chưa nhập", "Thong bao");
+                    return;
+                }
+
+
+                if (dtNgaySinh.Value.Year >= DateTime.Now.Year - 10)
+                {
+
+                    MessageBox.Show(this, "Tuổi phải >10", "Thong bao");
+                    return;
+                }
+
+                string gt = optNam.Checked ? "1" : "0";
+                SqlHelper.ExecuteNonQuery(
+                    "Pro_InsertDocGia",
+                    CommandType.StoredProcedure,
+                    "@option", opt,
+                    "@madg", txtMaDG.Text.Trim(),
+                    "@tendg", txtTenDG.Text.Trim(),
+                    "@diachi", txtDC.Text.Trim(),
+                    "@ngaysinh", dtNgaySinh.Value,
+                    "@email", txtEmail.Text.Trim(),
+                    "@gioitinh", gt,
+                    "@thongtinkhac", txtThongtin.Text.Trim(),
+                    "@hinh", filename);
+
+
+                HienThiDocGia();
+                SetControlVisible(false);
+                lvDocgia.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
 		private void picHinh_Click(object sender, System.EventArgs e)
 		{
