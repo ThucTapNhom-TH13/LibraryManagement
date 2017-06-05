@@ -238,6 +238,12 @@
     <Compile Include="frmTraSach.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="huongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="huongdan.Designer.cs">
+      <DependentUpon>huongdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptDocGia.cs">
       <DependentUpon>rptDocGia.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraSach.resx">
       <DependentUpon>frmTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="huongdan.resx">
+      <DependentUpon>huongdan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDocGia.rpt">
       <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>

@@ -102,3 +102,4 @@ C:\Users\Nguyen Linh\Documents\GitHub\LibraryManagement\LibraryManagement\obj\De
 C:\Users\Nguyen Linh\Documents\GitHub\LibraryManagement\LibraryManagement\obj\Debug\Quanlythuvien.frmTKDGTre.resources
 C:\Users\Nguyen Linh\Documents\GitHub\LibraryManagement\LibraryManagement\obj\Debug\Quanlythuvien.frmTraSach.resources
 C:\Users\Nguyen Linh\Documents\GitHub\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.Cache
+C:\Users\Nguyen Linh\Documents\GitHub\LibraryManagement\LibraryManagement\obj\Debug\Quanlythuvien.huongdan.resources
